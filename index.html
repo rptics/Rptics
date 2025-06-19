@@ -4,91 +4,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RPTICS - Institute of Computer Science</title>
+  <title>RPTICS - Admission & Franchise Inquiry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header id="header">
-    <img src="1000229101.jpg" alt="RPTICS Logo" class="logo"/>
-    <h1>RP Tiwari Institute of Computer Technology</h1>
-    <p>Belwar, Sujanganj, Jaunpur | Mob: 9838383393</p>
-  </header>
 
-  <nav id="navbar">
-    <a href="#about">About</a>
-    <a href="#courses">Courses</a>
-    <a href="#admission">Admission</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#mission">Mission</a>
-    <a href="#contact">Contact</a>
-    <a href="#registration">Apply</a>
-  </nav>
+<header>
+  <img src="1000229101.jpg" alt="RPTICS Logo" class="logo"/>
+  <h1>RP Tiwari Institute of Computer Technology</h1>
+  <p>Belwar, Sujanganj, Jaunpur | Contact: 9838383393</p>
+</header>
 
-  <section class="banner">
-    <h1>🎓 Admission Open for 2025 – Enroll Now!</h1>
-    <p>Future-Ready Computer Skills from Certified Experts</p>
-  </section>
+<div class="tabs">
+  <button onclick="showTab('admission')" id="defaultTab">Admission Inquiry</button>
+  <button onclick="showTab('franchise')">Franchise Inquiry</button>
+</div>
 
-  <section id="about"><h2>About Us</h2><p>RPTICS empowers students with career-oriented computer knowledge.</p></section>
-  <section id="courses"><h2>Courses Offered</h2><ul><li>PGDCA, ADCA, DCA, CCC, TALLY, 'O' LEVEL</li></ul></section>
-  <section id="admission"><h2>Admission Process</h2><p>Visit center, fill form, submit ID, pay fee.</p></section>
-
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="slider">
-      <img src="1000229098.jpg" class="slide active"/>
-      <img src="1000229100.jpg" class="slide"/>
-      <img src="1000229102.jpg" class="slide"/>
-      <img src="1000229103.jpg" class="slide"/>
-    </div>
-  </section>
-
-  <section id="mission"><h2>Our Mission</h2><p>Bridge the digital divide by offering high-quality IT education.</p></section>
-
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <blockquote>"RPTICS changed my career!" – Priya Singh</blockquote>
-    <blockquote>"Best institute in the region." – Rahul Yadav</blockquote>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📍 Belwar, Sujanganj, Jaunpur, UP</p>
-    <p>📞 9838383393</p>
-    <p>📧 rptics@gmail.com</p>
-    <iframe src="https://maps.google.com/maps?q=Belwar%20Sujanganj%20Jaunpur&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200" style="border:0;"></iframe>
-  </section>
-
-  <section id="registration">
-    <h2>Apply Online</h2>
+<div class="container">
+  <section id="admission" class="tab-content">
+    <h2>Admission Inquiry Form</h2>
     <form action="#" method="POST">
       <input type="text" placeholder="Full Name" required />
-      <input type="tel" placeholder="Mobile" required />
-      <select><option>PGDCA</option><option>ADCA</option></select>
-      <button type="submit">Submit</button>
+      <input type="tel" placeholder="Mobile Number" required />
+      <input type="email" placeholder="Email Address" />
+      <select required>
+        <option value="">-- Select Course --</option>
+        <option value="PGDCA">PGDCA</option>
+        <option value="ADCA">ADCA</option>
+        <option value="DCA">DCA</option>
+        <option value="CCC">CCC</option>
+        <option value="OLEVEL">'O' LEVEL</option>
+      </select>
+      <textarea placeholder="Your Message (optional)"></textarea>
+      <button type="submit">Submit Inquiry</button>
     </form>
   </section>
 
-  <footer>
-    <p>© 2025 RPTICS | Follow us:
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-    </p>
-  </footer>
+  <section id="franchise" class="tab-content" style="display:none">
+    <h2>Franchise Inquiry Form</h2>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Full Name" required />
+      <input type="tel" placeholder="Mobile Number" required />
+      <input type="email" placeholder="Email Address" />
+      <input type="text" placeholder="City/District" required />
+      <textarea placeholder="Tell us about your background or interest in RPTICS"></textarea>
+      <button type="submit">Submit Franchise Request</button>
+    </form>
+  </section>
+</div>
 
-  <a href="https://wa.me/919838383393" class="whatsapp" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+<footer>
+  <p>&copy; 2025 RP Tiwari Institute of Computer Technology. All rights reserved.</p>
+</footer>
 
-  <script>
-    const slides = document.querySelectorAll('.slide');
-    let index = 0;
-    setInterval(() => {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 3000);
-  </script>
+<script>
+function showTab(tabId) {
+  const contents = document.querySelectorAll('.tab-content');
+  contents.forEach(el => el.style.display = 'none');
+  document.getElementById(tabId).style.display = 'block';
+}
+document.getElementById("defaultTab").click();
+</script>
+
 </body>
 </html>
