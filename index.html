@@ -4,21 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RPTICS - Admission & Franchise Inquiry</title>
+  <title>RPTICS - Inquiry</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
-  <img src="1000229101.jpg" alt="RPTICS Logo" class="logo"/>
+  <img src="logo.jpg" alt="RPTICS Logo" class="logo"/>
   <h1>RP Tiwari Institute of Computer Technology</h1>
   <p>Belwar, Sujanganj, Jaunpur | Contact: 9838383393</p>
 </header>
 
 <div class="tabs">
-  <button onclick="showTab('admission')" id="defaultTab">Admission Inquiry</button>
-  <button onclick="showTab('franchise')">Franchise Inquiry</button>
+  <button onclick="showTab('admission')" id="defaultTab">🎓 Admission Inquiry</button>
+  <button onclick="showTab('franchise')">🏢 Franchise Inquiry</button>
 </div>
 
 <div class="container">
@@ -47,7 +47,7 @@
       <input type="text" placeholder="Full Name" required />
       <input type="tel" placeholder="Mobile Number" required />
       <input type="email" placeholder="Email Address" />
-      <input type="text" placeholder="City/District" required />
+      <input type="text" placeholder="City / District" required />
       <textarea placeholder="Tell us about your background or interest in RPTICS"></textarea>
       <button type="submit">Submit Franchise Request</button>
     </form>
@@ -60,8 +60,8 @@
 
 <script>
 function showTab(tabId) {
-  const contents = document.querySelectorAll('.tab-content');
-  contents.forEach(el => el.style.display = 'none');
+  const tabs = document.querySelectorAll('.tab-content');
+  tabs.forEach(tab => tab.style.display = 'none');
   document.getElementById(tabId).style.display = 'block';
 }
 document.getElementById("defaultTab").click();

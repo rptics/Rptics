@@ -3,7 +3,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f0f4f8;
+  background: #eef2f5;
 }
 header {
   background: #003366;
@@ -13,6 +13,7 @@ header {
 }
 .logo {
   height: 90px;
+  margin-bottom: 10px;
 }
 .tabs {
   display: flex;
